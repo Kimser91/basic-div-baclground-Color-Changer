@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app" class="container">
+       happa
+    </div>
+    <button id="button1" onclick="changeColor()">red</button>
+    
+
+    <script>
+        let colorCounter = 0;
+       function changeColor()
+        {
+            if(colorCounter == 0){
+            document.getElementById('app').innerHTML = /*html*/
+            `
+                <div style="background-color:red; width: 100%; height: 100px;"></div>
+            `;
+            document.getElementById('button1').innerHTML = `yellow`
+            colorCounter++;
+            }
+
+            else if (colorCounter == 1) { document.getElementById('app').innerHTML = /*html*/
+            `
+                <div style="background-color:yellow; width: 100%; height: 100px;"></div>
+            `;
+            document.getElementById('button1').innerHTML = `red`;
+                colorCounter++;
+            }
+            else {
+                colorCounter = 0; 
+                changeColor();}
+        };
+
+    </script>
+</body>
+</html>
